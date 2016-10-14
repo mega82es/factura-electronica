@@ -31,7 +31,7 @@
     <url>scm:git:git@github.com:bigdata-mx/factura-electronica.git</url>
   </scm>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -331,16 +331,30 @@
             </configuration>
           </execution>
           <execution>
-            <id>schema19-xjc</id>
+            <id>schema19-11-xjc</id>
             <goals>
               <goal>xjc</goal>
             </goals>
             <configuration>
-              <packageName>mx.bigdata.sat.common.nomina.schema</packageName>
-              <schemaDirectory>src/main/resources/xsd/common/nomina</schemaDirectory>
-              <outputDirectory>${project.build.directory}/generated-sources/xjc19</outputDirectory>          
-              <staleFile>${project.build.directory}/generated-sources/xjc19/.staleFlag</staleFile>
+              <packageName>mx.bigdata.sat.common.nomina11.schema</packageName>
+              <schemaDirectory>src/main/resources/xsd/common/nomina/v11</schemaDirectory>
+              <outputDirectory>${project.build.directory}/generated-sources/xjc19-v11</outputDirectory>          
+              <staleFile>${project.build.directory}/generated-sources/xjc19-v11/.staleFlag</staleFile>
               <extension>true</extension>
+            </configuration>
+          </execution>
+          <execution>
+            <id>schema19-12-xjc</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+            <configuration>
+              <packageName>mx.bigdata.sat.common.nomina12.schema</packageName>
+              <schemaDirectory>src/main/resources/xsd/common/nomina/v12</schemaDirectory>
+              <outputDirectory>${project.build.directory}/generated-sources/xjc19-v12</outputDirectory>          
+              <staleFile>${project.build.directory}/generated-sources/xjc19-v12/.staleFlag</staleFile>
+              <extension>true</extension>
+              <encoding>${file.encoding}</encoding>
             </configuration>
           </execution>
           <execution>
