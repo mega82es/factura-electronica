@@ -143,8 +143,21 @@
             <configuration>
               <packageName>mx.bigdata.sat.cfdi.v32.schema</packageName>
               <schemaDirectory>src/main/resources/xsd/v32</schemaDirectory>
-              <outputDirectory>${project.build.directory}/generated-sources/xjc4</outputDirectory>          
-              <staleFile>${project.build.directory}/generated-sources/xjc4/.staleFlag</staleFile>
+              <outputDirectory>${project.build.directory}/generated-sources/xjc4-v32</outputDirectory>          
+              <staleFile>${project.build.directory}/generated-sources/xjc4-v32/.staleFlag</staleFile>
+              <extension>true</extension>
+            </configuration>
+          </execution>
+          <execution>
+            <id>schema4v33-xjc</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+            <configuration>
+              <packageName>mx.bigdata.sat.cfdi.v33.schema</packageName>
+              <schemaDirectory>src/main/resources/xsd/v33</schemaDirectory>
+              <outputDirectory>${project.build.directory}/generated-sources/xjc4-v33</outputDirectory>          
+              <staleFile>${project.build.directory}/generated-sources/xjc4-v33/.staleFlag</staleFile>
               <extension>true</extension>
             </configuration>
           </execution>
